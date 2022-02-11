@@ -1,0 +1,34 @@
+/* CSS Document 
+Web Name: Music Mixer 
+Description: Major Assignment 
+Author: Immama Ayoub, Giovanni Perruzzi
+Version: 1.0
+*/
+
+@charset "UTF-8";
+/*------------------
+ 1- Global 
+ 2- Ids
+ -------------------*/
+
+/*_________________
+
+    Global
+___________________*/
+
+.hidden{
+	display: none;
+}
+
+/*_________________
+
+    Ids
+___________________*/
+
+.title h2 {
+    background-color: dimgray;
+    font-size: 4em;
+    text-align: center;
+    padding: 0.5em;
+
+}
