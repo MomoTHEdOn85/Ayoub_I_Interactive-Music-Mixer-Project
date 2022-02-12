@@ -16,6 +16,10 @@ Version: 1.0
     Global
 ___________________*/
 
+* {
+    box-sizing: border-box;
+}
+
 .hidden{
 	display: none;
 }
@@ -25,10 +29,58 @@ ___________________*/
     Ids
 ___________________*/
 
+div.title {
+    grid-column-start: 1;
+    grid-column-end: 6;
+}
+
 .title h2 {
     background-color: dimgray;
     font-size: 4em;
     text-align: center;
     padding: 0.5em;
 
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+#bg-image {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 1;
+}
+
+header, main, footer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    position: relative;
+}
+
+
+#images {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    padding-top: 10%;
+    z-index: 1;
+}
+
+.audio-controls {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button {
+    background-color: #000000;
+    border: none;
+    color: white;
+    padding: 12px 5px;
+    text-align: center;
+    display: inline-block;
+    font-size: 14px;
 }
