@@ -1,59 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dream Studio</title>
-
-    <link href="css/reset.css" rel="stylesheet" type="text/css" media="screen">
-
-    <link href="css/main.css" rel="stylesheet" type="text/css" media="screen">
-</head>
-<body>
-
+    <link
+      href="css/reset.css"
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+    />
+    <link href="css/main.css" rel="stylesheet" type="text/css" media="screen" />
+  </head>
+  <body>
     <div id="container">
-        <header>
-            <h1 class="hidden">Music Mixer Project - Dream Studio</h1>
-            <div class="title">
-                <h2>Dream Studio</h2>
-            </div>
-        </header>
+      <header>
+        <h1 class="hidden">Music Mixer Project - Dream Studio</h1>
+        <div class="title">
+          <h2>Dream Studio</h2>
+        </div>
+      </header>
     </div>
     <main>
-    <section id="bg-image">
-        <h1 class="hidden">Background Image</h1>
-        <img class="bgimage" src="images/background.png" alt="Background gradient">
-    </section>
-    <section id="images">
+      <section id="bg-image">
+        <h2 class="hidden">Background Image</h2>
+        <img
+          class="bgimage"
+          src="images/background.png"
+          alt="Background gradient"
+        />
+      </section>
+      <section id="images">
+        <h2 class="hidden">Images</h2>
         <div class="left-images-drag">
-            <img class="image1" draggable="true" src="images/image1.jpg" alt="Dog on book">
-            <img class="image2" draggable="true" src="images/image2.jpg" alt="Person standing by water.">
-            <img class="image3" draggable="true" src="images/image3.jpg" alt="Midnight blue scene with a moon and mountains.">
-            <img class="image4" draggable="true" src="images/image4.jpg" alt="">
-            <img class="image5" draggable="true" src="images/image5.jpg" alt="">
-            <img class="image6" draggable="true" src="images/image6.jpg" alt="">
+          <img
+            class="image1"
+            draggable="true"
+            src="images/image1.jpg"
+            alt="Dog on book"
+          />
+          <img
+            class="image2"
+            draggable="true"
+            src="images/image2.jpg"
+            alt="Person standing by water."
+          />
+          <img
+            class="image3"
+            draggable="true"
+            src="images/image3.jpg"
+            alt="Midnight blue scene with a moon and mountains."
+          />
+          <img class="image4" draggable="true" src="images/image4.jpg" alt="" />
+          <img class="image5" draggable="true" src="images/image5.jpg" alt="" />
+          <img class="image6" draggable="true" src="images/image6.jpg" alt="" />
         </div>
         <div class="right-images-drag">
-            <img class="image7" draggable="true" src="images/image7.jpg" alt="">
-            <img class="image8" draggable="true" src="images/image8.jpg" alt="">
-            <img class="image9" draggable="true" src="images/image9.jpg" alt="">
-            <img class="image10" draggable="true" src="images/image10.jpg" alt="">
-            <img class="image11" draggable="true" src="images/image11.jpg" alt="">
-            <img class="image12" draggable="true" src="images/image12.jpg" alt="">
+          <img class="image7" draggable="true" src="images/image7.jpg" alt="" />
+          <img class="image8" draggable="true" src="images/image8.jpg" alt="" />
+          <img class="image9" draggable="true" src="images/image9.jpg" alt="" />
+          <img
+            class="image10"
+            draggable="true"
+            src="images/image10.jpg"
+            alt=""
+          />
+          <img
+            class="image11"
+            draggable="true"
+            src="images/image11.jpg"
+            alt=""
+          />
+          <img
+            class="image12"
+            draggable="true"
+            src="images/image12.jpg"
+            alt=""
+          />
         </div>
-    </section>
+      </section>
     </main>
     <footer>
-    <section class="audio-controls">
+      <section class="audio-controls">
+        <h2 class="hidden">Audio</h2>
         <button id="playButton">PLAY</button>
         <button id="pauseButton">STOP</button>
         <button id="rewindButton">REWIND</button>
-
-        <input id="volume-control" type="range" min="0" max="100" step="1">
-    </section>
+        <input id="volume-control" type="range" min="0" max="100" step="1" />
+      </section>
     </footer>
     <script src="js/draganddrop.js" defer></script>
     <script src="js/audio.js" defer></script>
-</body>
+  </body>
 </html>
