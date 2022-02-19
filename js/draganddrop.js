@@ -20,7 +20,7 @@
 	}
 
 	function text(event) {
-		console.log("clicked on: header", );
+		console.log("clicked on: header" );
 	}
 
 	leftImages.forEach(img => img.addEventListener("dragstart", startDrag));
