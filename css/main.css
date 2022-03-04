@@ -46,6 +46,18 @@ img {
   height: auto;
 }
 
+#dropzones {
+  background-color: black;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  padding-top: 50%;
+  width: 600px;
+  height: 300px;
+  z-index: 1;
+}
+
 #bg-image {
   grid-column-start: 1;
   grid-column-end: -1;
@@ -58,14 +70,29 @@ footer {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   position: relative;
+  align-items: center;
 }
 
 #images {
+  display: flex;
   grid-column-start: 1;
-  grid-column-end: 4;
+  grid-column-end: 6;
   grid-row-start: 1;
   padding-top: 10%;
+  justify-content: space-between;
   z-index: 1;
+}
+
+.left-images-drag {
+  display: flex;
+  flex-direction: column;
+  padding-left: 100px;
+}
+
+.right-images-drag {
+  display: flex;
+  flex-direction: column;
+  padding-right: 100px;
 }
 
 .audio-controls {
