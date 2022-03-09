@@ -4,25 +4,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dream Studio</title>
-    <link
-      href="css/reset.css"
-      rel="stylesheet"
-      type="text/css"
-      media="screen"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <link href="css/reset.css" rel="stylesheet" type="text/css" media="screen" />
     <link href="css/main.css" rel="stylesheet" type="text/css" media="screen" />
+    <title>Dream Studio</title>
   </head>
   <body>
-    <div id="container">
+    <section id="container">
       <header>
         <h1 class="hidden">Music Mixer Project - Dream Studio</h1>
-        <div class="title">
+        <div class="header-title">
           <h2>Dream Studio</h2>
         </div>
       </header>
-    </div>
+    </section>
     <main>
+      <section id="bg-image">
+        <h2 class="hidden">Background Image</h2>
+        <img class="bg-image" src="images/background.png" alt="Background gradient" />
+      </section>
       <section id="dropzones">
         <h2 class="hidden">Image dropzones</h2>
         <div class="dropzone1"></div>
@@ -31,67 +33,46 @@
         <div class="dropzone4"></div>
         <div class="dropzone5"></div>
       </section>
-      <section id="bg-image">
-        <h2 class="hidden">Background Image</h2>
-        <img
-          class="bgimage"
-          src="images/background.png"
-          alt="Background gradient"
-        />
-      </section>
       <section id="images">
         <h2 class="hidden">Images</h2>
         <div class="left-images-drag">
-          <img
-            class="image1"
-            draggable="true"
-            src="images/image1.jpg"
-            alt="Dog on book"
-          />
-          <img
-            class="image2"
-            draggable="true"
-            src="images/image2.jpg"
-            alt="Person standing by water."
-          />
-          <img
-            class="image3"
-            draggable="true"
-            src="images/image3.jpg"
-            alt="Midnight blue scene with a moon and mountains."
-          />
-          <img class="image4" draggable="true" src="images/image4.jpg" alt="" />
-          <img class="image5" draggable="true" src="images/image5.jpg" alt="" />
-          <img class="image6" draggable="true" src="images/image6.jpg" alt="" />
+          <img class="image1" draggable="true" data-track="BassOne" src="images/image1.jpg" alt="Dog on book" />
+          <img class="image2" draggable="true" data-track="BassTwo" src="images/image2.jpg" alt="Person standing by water." />
+          <img class="image3" draggable="true" data-track="DrumOne" src="images/image3.jpg" alt="Midnight blue scene with a moon and mountains." />
+          <img class="image4" draggable="true" data-track="DrumTwo" src="images/image4.jpg" alt="Group hiking up a mountain." />
+          <img class="image5" draggable="true" data-track="DrumThree" src="images/image5.jpg" alt="Bright light at the end of forest." />
+          <img class="image6" draggable="true" data-track="DrumFour" src="images/image6.jpg" alt="Hot air Baloon over ocean in the night sky." />
         </div>
         <div class="right-images-drag">
-          <img class="image7" draggable="true" src="images/image7.jpg" alt="" />
-          <img class="image8" draggable="true" src="images/image8.jpg" alt="" />
-          <img class="image9" draggable="true" src="images/image9.jpg" alt="" />
-          <img
-            class="image10"
-            draggable="true"
-            src="images/image10.jpg"
-            alt=""
-          />
-          <img
-            class="image11"
-            draggable="true"
-            src="images/image11.jpg"
-            alt=""
-          />
-          <img
-            class="image12"
-            draggable="true"
-            src="images/image12.jpg"
-            alt=""
-          />
+          <img class="image7" draggable="true" data-track="DrumFive" src="images/image7.jpg" alt="Hot air baloon over ocean near sun rise." />
+          <img class="image8" draggable="true" data-track="DrumSix" src="images/image8.jpg" alt="Pegasus up in clouds." />
+          <img class="image9" draggable="true" data-track="MelodyOne" src="images/image9.jpg" alt="Monument above the clouds." />
+          <img class="image10" draggable="true" data-track="MelodyTwo" src="images/image10.jpg" alt="Dinosaur skull island." />
+          <img class="image11" draggable="true" data-track="MelodyThree" src="images/image11.jpg" alt="Man looking up a big elephant coming towards him." />
+          <img class="image12" draggable="true" data-track="MelodyFour" src="images/image12.jpg" alt="lady standing on a deck in the moonlight." />
+        </div>
+      </section>
+      <section id="audio">
+        <h2 class="hidden">Audio clips</h2>
+        <div class="audio-clips">
+          <audio data-track="BassOne" src="audio/bass-beat/Kit 01 - 808 Loop - 155 BPM (D).wav"></audio>
+          <audio data-track="BassTwo" src="audio/bass-beat/Kit 02 - Bass Loop - 155 BPM (D).wav"></audio>
+          <audio data-track="DrumOne" src="audio/drum-trap/Kit 01 - Top Drum Loop Filtered - 155 BPM.wav"></audio>
+          <audio data-track="DrumTwo" src="audio/drum-trap/looperman-l-1929922-0214284-hard-trap-hip-hop-intro-bell-synth-piano-155-bpm-orig.wav"></audio>
+          <audio data-track="DrumThree" src="audio/drum-trap/looperman-l-2358624-0175525-trap-snare-hihat-hard-loop-2.wav"></audio>
+          <audio data-track="DrumFour" src="audio/drum-trap/kicks-snare/BVKER - Chaos Kick Loop - 02 - 140 BPM.wav"></audio>
+          <audio data-track="DrumFive" src="audio/drum-trap/kicks-snare/BVKER - The Astro Snare 02.wav"></audio>
+          <audio data-track="DrumSix" src="audio/drum-trap/kicks-snare/Kit 02 - Kick Loop - 155 BPM.wav"></audio>
+          <audio data-track="MelodyOne" src="audio/melody/BVKER - Chaos Melody Loop - 22 - 140 BPM - (E).wav"></audio>
+          <audio data-track="MelodyTwo" src="audio/melody/Kit 02 - FX Loop - 155 BPM (D).wav"></audio>
+          <audio data-track="MelodyThree" src="audio/melody/looperman-l-3324405-0244113-playboi-carti-x-trippie-redd-loop-bust.wav"></audio>
+          <audio data-track="melodyFour" src="audio/melody/piano/BVKER - Chaos Melody Loop - 13 - 130 BPM - (A).wav"></audio>
         </div>
       </section>
     </main>
     <footer>
-      <section class="audio-controls">
-        <h2 class="hidden">Audio</h2>
+      <section id="audio-controls">
+        <h2 class="hidden">Audio Controls</h2>
         <button id="playButton">PLAY</button>
         <button id="pauseButton">STOP</button>
         <button id="rewindButton">REWIND</button>

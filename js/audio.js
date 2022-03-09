@@ -5,7 +5,6 @@
 		pauseButton = document.getElementById("pauseButton"),
 		rewindButton = document.getElementById("rewindButton");
 
-
 	function loadTrack() {
 		//debugger;
 		theAudio.src = `audio/${this.dataset.audiotrack}.mp3`;
