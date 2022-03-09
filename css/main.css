@@ -18,6 +18,8 @@ ___________________*/
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .hidden {
@@ -38,7 +40,18 @@ div.title {
   background-color: dimgray;
   font-size: 4em;
   text-align: center;
+  text-shadow: 1px 1px;
   padding: 0.5em;
+  animation-name: Slide;
+  animation-duration: 5s;
+}
+
+@keyframes Slide {
+  40% {
+    background-color: #ffffff;
+    left: 100px;
+    right: 100px;
+  }
 }
 
 img {
@@ -87,6 +100,21 @@ footer {
   display: flex;
   flex-direction: column;
   padding-left: 100px;
+}
+
+.image1,
+.image2,
+.image3,
+.image4,
+.image5,
+.image6,
+.image7,
+.image8,
+.image9,
+.image10,
+.image11,
+.image12 {
+  padding-bottom: 15px;
 }
 
 .right-images-drag {
