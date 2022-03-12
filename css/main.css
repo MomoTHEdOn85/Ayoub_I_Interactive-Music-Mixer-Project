@@ -7,13 +7,13 @@ Version: 1.0
 
 @charset "UTF-8";
 /*------------------
-1- Global 
-2- Ids
--------------------*/
+ 1- Global 
+ 2- Ids
+ -------------------*/
 
 /*_________________
 
-Global
+    Global
 ___________________*/
 
 * {
@@ -24,57 +24,39 @@ ___________________*/
   display: none;
 }
 
-img {
-  height: auto;
-  max-width: 100%;
-}
-
 /*_________________
 
-Ids
+    Ids
 ___________________*/
 
-/* Grid start */
-
-header,
-main,
-footer {
-  align-items: center;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 5px;
-  position: relative;
-}
-
-/* Grid end */
-
-/* Header start */
-
-.header-title {
+div.title {
   grid-column-start: 1;
   grid-column-end: 6;
 }
 
-@keyframes color {
-  40% {background-color: #000000; left: 100px; right: 100px;}
-}
-
-.header-title h2 {
-  animation-name: color;
-  animation-duration: 5s;
-  background-color: #696969;
-  color: #E10600;
+.title h2 {
+  background-color: dimgray;
   font-size: 4em;
-  font-family: "Montserrat", sans-serif;
-  padding: 0.5em;
-  letter-spacing: 5px;
   text-align: center;
-  text-shadow: 2px 2px 2px #000000;
+  padding: 0.5em;
 }
 
-/* Header end */
+img {
+  max-width: 100%;
+  height: auto;
+}
 
-/* Background image start */
+#dropzones {
+  background-color: black;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  padding-top: 50%;
+  width: 600px;
+  height: 300px;
+  z-index: 1;
+}
 
 #bg-image {
   grid-column-start: 1;
@@ -82,30 +64,14 @@ footer {
   grid-row-start: 1;
 }
 
-.bg-image {
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+header,
+main,
+footer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  position: relative;
+  align-items: center;
 }
-
-/* Background image end */
-
-/* Dropzones start */
-
-#dropzones {
-  background-color: #000000;
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 2;
-  height: 300px;
-  padding-top: 50%;
-  width: 600px;
-  z-index: 1;
-}
-
-/* Dropzones end */
-
-/* Images start */
 
 #images {
   display: flex;
@@ -117,49 +83,31 @@ footer {
   z-index: 1;
 }
 
-.left-images-drag,
-.right-images-drag {
+.left-images-drag {
   display: flex;
   flex-direction: column;
   padding-left: 100px;
+}
+
+.right-images-drag {
+  display: flex;
+  flex-direction: column;
   padding-right: 100px;
 }
 
-.image1,
-.image2,
-.image3,
-.image4,
-.image5,
-.image6,
-.image7,
-.image8,
-.image9,
-.image10,
-.image11,
-.image12 {
-  padding-bottom: 15px;
-  border-radius: 15px;
-}
-
-/* Images end */
-
-/* Audio controls starts */
-
-#audio-controls {
-  display: flex;
+.audio-controls {
   grid-column-start: 3;
   grid-column-end: 4;
+  display: flex;
   justify-content: space-evenly;
 }
 
 button {
   background-color: #000000;
   border: none;
-  color: #FFFFFF;
-  display: inline-block;
-  font-size: 14px;
+  color: white;
   padding: 12px 5px;
   text-align: center;
+  display: inline-block;
+  font-size: 14px;
 }
-
-/* Audio controls end */

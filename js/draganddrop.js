@@ -1,8 +1,9 @@
 (() => {
 	leftImages = document.querySelectorAll(".left-images-drag *"),
-		dropZones = document.querySelectorAll("#dropzones *"),
+		dropZones = document.querySelectorAll("#bg-image"),
 		titleContainer = document.querySelectorAll(".title"),
 		rightImages = document.querySelectorAll(".right-images-drag *");
+
 
 	function startDrag(event) {
 		console.log("started dragging");
@@ -19,7 +20,7 @@
 	}
 
 	function text(event) {
-		console.log("clicked on: header");
+		console.log("clicked on: header" );
 	}
 
 	leftImages.forEach(img => img.addEventListener("dragstart", startDrag));
