@@ -1,13 +1,13 @@
-/* CSS Document 
-Web Name: Music Mixer 
-Description: Major Assignment 
+/* CSS Document
+Web Name: Music Mixer
+Description: Major Assignment
 Author: Immama Ayoub, Giovanni Perruzzi
 Version: 1.0
 */
 
 @charset "UTF-8";
 /*------------------
-1- Global 
+1- Global
 2- Ids
 -------------------*/
 
@@ -91,17 +91,43 @@ footer {
 
 /* Dropzones start */
 
-#dropzones {
-  background-color: #000000;
+#mid-drop {
   grid-column-start: 3;
   grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 2;
-  height: 300px;
-  padding-top: 50%;
-  width: 600px;
   z-index: 1;
+
 }
+.center-img {
+  align-items: center;
+}
+#dropzones {
+  background-color: yellow;
+  display: grid;
+	grid-column: 2/ span 2;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: auto;
+	grid-gap: 1em;
+	justify-content: space-evenly;
+}
+.dropArea {
+  display: grid;
+	border: 30px solid #dedede;
+	background-color: floralwhite;
+	border-radius: 12%;
+  position: relative;
+  height: 30px;
+}
+
+.dropArea img {
+  position: absolute;
+  width: 20%;
+
+}
+
+
+
 
 /* Dropzones end */
 
@@ -125,18 +151,18 @@ footer {
   padding-right: 100px;
 }
 
-.image1,
-.image2,
-.image3,
-.image4,
-.image5,
-.image6,
-.image7,
-.image8,
-.image9,
-.image10,
-.image11,
-.image12 {
+#image1,
+#image2,
+#image3,
+#image4,
+#image5,
+#image6,
+#image7,
+#image8,
+#image9,
+#image10,
+#image11,
+#image12 {
   padding-bottom: 15px;
   border-radius: 15px;
 }
