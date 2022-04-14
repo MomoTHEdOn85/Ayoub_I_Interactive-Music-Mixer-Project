@@ -1,35 +1,51 @@
 (() => {
 	const theAudio = document.querySelector("audio"),
-		trackButtons = document.querySelectorAll(".audio-track"),
+		track = document.querySelectorAll("audio"),
 		playButton = document.getElementById("playButton"),
 		pauseButton = document.getElementById("pauseButton"),
 		rewindButton = document.getElementById("rewindButton");
+		resetButton = document.getElementById("resetButton");
 
-	function loadTrack() {
-		//debugger;
-		theAudio.src = `audio/${this.dataset.audiotrack}.mp3`;
-		theAudio.load();
+	 function loadTrack() {
+		debugger;
 
-		playTrack();
-	}
 
-	function playTrack() {
-		theAudio.play();
-	}
 
-	function pauseTrack() {
-		theAudio.pause();
-	}
+		let theAudio = document.querySelector(`audio[data-key="${event.keyCode}"]`);
 
-	function rewindTrack() {
+		if (!theAudio) {return;}
+
 		theAudio.currentTime = 0;
 
+
 		playTrack();
 	}
+	  function playTrack() {
+			theAudio.play();
+	 }
 
-	trackButtons.forEach(button => button.addEventListener("click", loadTrack));
+	 function pauseTrack() {
+		  theAudio.pause();
+	 }
 
-	playButton.addEventListener("click", playTrack);
-	pauseButton.addEventListener("click", pauseTrack);
-	rewindButton.addEventListener("click", rewindTrack);
+	 function rewindTrack() {
+		  theAudio.currentTime = 0;
+
+		 playTrack();
+	}
+
+	function resett() {
+		window.location.reload();
+	}
+
+
+
+	  //theAudio.addEventListener("drop", loadTrack);
+
+		window.addEventListener('keyup', loadTrack);
+
+	  playButton.addEventListener("click", playTrack);
+	  pauseButton.addEventListener("click", pauseTrack);
+	  rewindButton.addEventListener("click", rewindTrack);
+		resetButton.addEventListener("click", resett);
 })()
