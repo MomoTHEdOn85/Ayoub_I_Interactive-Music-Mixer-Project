@@ -70,16 +70,12 @@
 
 	}
 
-	function playTrack (event) {
+	function pllayTrack (event) {
 		event.preventDefault();
 		let playy = document.querySelectorAll(".on");
 		playy.forEach(playy => playy.play());
+
 	}
-
-
-
-
-
 
 
   //event listener for each icons or images
@@ -89,12 +85,9 @@
 	//leftImages.forEach(img => img.addEventListener("dragstart", startDrag));
 
 
-
-
-
 	titleContainer.forEach(header => header.addEventListener("click", text));
 
-	playButton.addEventListener("click", playTrack);
+	playButton.addEventListener("click", pllayTrack);
 
 	window.addEventListener("keyup", LoadMusic);
 
