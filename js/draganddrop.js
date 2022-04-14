@@ -58,6 +58,9 @@
 	function LoadMusic(event) {
 		let draggedSound = event.dataTransfer.getData("draggedSound");
 		let AudioEl = document.querySelector(`audio[data-key="${draggedSound}"]`);
+
+		if (!AudioEl) {return;}
+
 		AudioEl.classList.add("on");
 
 		console.log("dropped this: ", draggedSound);
@@ -93,7 +96,7 @@
 
 	playButton.addEventListener("click", playTrack);
 
-	window.addEventListener("drop", LoadMusic);
+	window.addEventListener("keyup", LoadMusic);
 
 	dropZones.forEach(zone => {
 		zone.addEventListener("dragover", draggedOver);

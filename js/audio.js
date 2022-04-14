@@ -9,8 +9,14 @@
 	 function loadTrack() {
 		debugger;
 
-		theAudio.src = `audio/${this.dataset.key}.wav`;
-		theAudio.load();
+
+
+		let theAudio = document.querySelector(`audio[data-key="${event.keyCode}"]`);
+
+		if (!theAudio) {return;}
+
+		theAudio.currentTime = 0;
+
 
 		playTrack();
 	}
@@ -34,7 +40,9 @@
 
 
 
-	  theAudio.addEventListener("ended", loadTrack);
+	  //theAudio.addEventListener("drop", loadTrack);
+
+		window.addEventListener('keyup', loadTrack);
 
 	  playButton.addEventListener("click", playTrack);
 	  pauseButton.addEventListener("click", pauseTrack);
