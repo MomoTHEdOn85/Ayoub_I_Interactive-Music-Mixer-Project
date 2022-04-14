@@ -1,35 +1,43 @@
 (() => {
 	const theAudio = document.querySelector("audio"),
-		trackButtons = document.querySelectorAll(".audio-track"),
+		track = document.querySelectorAll("audio"),
 		playButton = document.getElementById("playButton"),
 		pauseButton = document.getElementById("pauseButton"),
 		rewindButton = document.getElementById("rewindButton");
+		resetButton = document.getElementById("resetButton");
 
-	function loadTrack() {
-		//debugger;
-		theAudio.src = `audio/${this.dataset.audiotrack}.mp3`;
+	 function loadTrack() {
+		debugger;
+
+		theAudio.src = `audio/${this.dataset.key}.wav`;
 		theAudio.load();
 
 		playTrack();
 	}
+	  function playTrack() {
+			theAudio.play();
+	 }
 
-	function playTrack() {
-		theAudio.play();
+	 function pauseTrack() {
+		  theAudio.pause();
+	 }
+
+	 function rewindTrack() {
+		  theAudio.currentTime = 0;
+
+		 playTrack();
 	}
 
-	function pauseTrack() {
-		theAudio.pause();
+	function resett() {
+		window.location.reload();
 	}
 
-	function rewindTrack() {
-		theAudio.currentTime = 0;
 
-		playTrack();
-	}
 
-	trackButtons.forEach(button => button.addEventListener("click", loadTrack));
+	  theAudio.addEventListener("ended", loadTrack);
 
-	playButton.addEventListener("click", playTrack);
-	pauseButton.addEventListener("click", pauseTrack);
-	rewindButton.addEventListener("click", rewindTrack);
+	  playButton.addEventListener("click", playTrack);
+	  pauseButton.addEventListener("click", pauseTrack);
+	  rewindButton.addEventListener("click", rewindTrack);
+		resetButton.addEventListener("click", resett);
 })()
